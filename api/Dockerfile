@@ -18,19 +18,17 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
     && docker-php-ext-install gd
 
-#RUN getent group www || groupadd -g 1000 www
-#RUN useradd -u 1000 -ms /bin/bash -g www www || true
+RUN getent group www || groupadd -g 1000 www
+RUN useradd -u 1000 -ms /bin/bash -g www www || true
 
 COPY . /var/www
 
-RUN chown -R www-data:www-data /var/www
+COPY --chown=www:www . /var/www
 
-RUN chmod 777 $(pwd)
+USER www
+
 RUN composer install
-RUN chmod -R 777 storage
-RUN chmod -R 775 storage
-RUN chmod -R 775 bootstrap
-RUN php artisan config:cache
+
 RUN php artisan config:clear
 
 
