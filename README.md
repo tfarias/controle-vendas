@@ -26,6 +26,8 @@
 ```
     $ docker exec -it tray_api vendor/bin/phpunit tests
 ```
+- Porém como pode ser observado nas actions do repositório do github, já está sendo feito os tests com phpunit 
+na aplicação. :)
 
 ## Desafio
 
