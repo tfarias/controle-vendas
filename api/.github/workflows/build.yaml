@@ -1,4 +1,4 @@
-name: ci-tray
+name: ci-tray-api
 on:
   pull_request:
     branches:
