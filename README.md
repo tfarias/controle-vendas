@@ -14,6 +14,15 @@
 ```
     $ docker-compose up -d --build
     $ docker exec -it tray_api php artisan migrate
+    
+    *** Caso de algum erro de permissão execute o comando abaixo na raiz do projeto:
+    
+    $ sudo chown "$USER":"$USER" $(pwd)
+    
+    E após isso execute o docker novamenteo
+    
+    $ docker-compose up -d --build
+    
   ```
 - Feito isso a aplicação já deve estar funcionando basta acessar o endereço
 ```
