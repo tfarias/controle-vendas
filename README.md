@@ -20,6 +20,13 @@
     http://localhost:3001
   ```
 
+## Testes
+- Para rodar os testes da api basta rodar o comando 
+
+```
+    $ docker exec -it tray_api vendor/bin/phpunit tests
+```
+
 ## Desafio
 
 - [x] Criar Vendedor
@@ -87,3 +94,4 @@
     
     basta executá-lo e precionar o botão que as notificações serão enviadas.
 ```
+
