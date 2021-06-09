@@ -27,7 +27,7 @@
     chmod -R 777 api/storage
     chmod -R 777 api/bootstrap
   
-    E após isso execute o docker novamenteo
+    E após isso execute o docker novamente
     
     $ docker-compose up -d --build
     
