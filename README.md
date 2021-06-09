@@ -17,6 +17,11 @@
     $ docker-compose up -d --build
     
     $ docker exec -it tray_api php artisan migrate
+    -  caso este comando apresente erro basta rodar esse comando
+    $ docker exec -it tray_api composer install
+    - e depois 
+    $ docker exec -it tray_api php artisan migrate
+    
     
     *** Caso de algum erro de permissão execute o comando abaixo na raiz do projeto:
     chmod -R 777 api/storage
