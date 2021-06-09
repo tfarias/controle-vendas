@@ -10,21 +10,24 @@
   ```
 
 # Instalação
-- Após fazer um pull request da aplicação executar os comando abaixo:
+- Para fazer a instalação basta seguir os paços abaixo:
 ```
+    $ chmod +x front/docker/entrypoint.sh
+    
     $ docker-compose up -d --build
+    
     $ docker exec -it tray_api php artisan migrate
     
     *** Caso de algum erro de permissão execute o comando abaixo na raiz do projeto:
-    
-    $ sudo chown "$USER":"$USER" $(pwd)
-    
+    chmod -R 777 api/storage
+    chmod -R 777 api/bootstrap
+  
     E após isso execute o docker novamenteo
     
     $ docker-compose up -d --build
     
   ```
-- Feito isso a aplicação já deve estar funcionando basta acessar o endereço
+- Feito isso é só aguardar o build da aplicação.
 ```
     http://localhost:3001
   ```
