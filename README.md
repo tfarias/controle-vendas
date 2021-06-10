@@ -12,7 +12,6 @@
 # Instalação
 - Para fazer a instalação basta seguir os paços abaixo:
 ```
-    $ chmod +x front/docker/entrypoint.sh
     
     $ docker-compose up -d --build
     
